@@ -1,1 +1,41 @@
 
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card result-card">
+            <div class="card-body text-center">
+                <h2 class="card-title">Prediction Results</h2>
+                <hr class="bg-light">
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>📍 Location</h5>
+                        <p class="fs-4">{{ result.location }}</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>📅 Date</h5>
+                        <p class="fs-4">{{ result.date }}</p>
+                    </div>
+                </div>
+                
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <h5>🌧️ Rain Today</h5>
+                        <p class="fs-3 fw-bold">{{ result.rain_today }}</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>🌡️ Average Temperature</h5>
+                        <p class="fs-3 fw-bold">{{ result.avg_temp }}°C</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-3">
+            <a href="/" class="btn btn-outline-primary">Make Another Prediction</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
